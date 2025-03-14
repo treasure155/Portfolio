@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Idem - Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .primary-color { background-color: #1b479e; color: white; }
+        .secondary-color { color: #fb8127; }
+        .profile-img { 
+            border-radius: 50%; 
+            max-width: 200px; 
+            border: 5px solid #fb8127; 
+            transition: transform 0.3s ease-in-out; 
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer { background-color: #1b479e; color: white; padding: 20px 0; }
+        .footer a { color: #fb8127; text-decoration: none; transition: color 0.3s ease-in-out; }
+        .footer a:hover { color: white; }
+
+        .card {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            border: none;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .section-hover {
+            transition: background-color 0.5s ease-in-out;
+            padding: 40px 0;
+        }
+        .section-hover:hover {
+            background-color: rgba(27, 71, 158, 0.1);
+            padding: 30px;
+            border-radius: 30px;
+        }
+
+        .btn-enroll {
+            background-color: #fb8127;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-enroll:hover {
+            background-color: #1b479e;
+            color: white;
+        }
+
+        .col-md-4{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="text-center p-5 primary-color">
+        <img src="IMG_8485.jpeg" alt="Treasure Idem" class="profile-img">
+        <h1>Treasure Idem</h1>
+        <p class="secondary-color">Full-Stack Web Developer | Instructor | Data Analyst</p>
+        <p> I specialize in HTML, CSS, EJS, Bootstrap, Node.js, MongoDB, MySQL, and more. <br> I teach Web Development, WordPress Web Design, and Data Analysis at TechAlpha Hub.</p>
+    </header>
+    
+    <!-- Skills Section -->
+    <section class="container my-5 section-hover">
+        <h2 class="text-center">Skills and Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-code fa-3x secondary-color"></i>
+                    <h4>Front-End Development</h4>
+                    <p>HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-server fa-3x secondary-color"></i>
+                    <h4>Back-End Development</h4>
+                    <p>Node.js, Express, EJS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-database fa-3x secondary-color"></i>
+                    <h4>Database Management</h4>
+                    <p>MongoDB, MySQL</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-database fa-3x secondary-color"></i>
+                    <h4>Data Analysis</h4>
+                    <p>Excel, Python etc</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-database fa-3x secondary-color"></i>
+                    <h4>Graphics Desing and Video Editing</h4>
+                    <p>canva and Capcut</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <i class="fa fa-database fa-3x secondary-color"></i>
+                    <h4>Web Design With Wordpress</h4>
+                    <p>Wordpress CMS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section class="container my-5 section-hover">
+        <h2 class="text-center">Courses I Offer</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Full-Stack Web Development</h4>
+                    <p>Master front-end & back-end development to build dynamic web applications.</p>
+                    <p><strong>₦160,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Front-End Web Development</h4>
+                    <p>Learn HTML, CSS, JavaScript, and Bootstrap to design stunning websites.</p>
+                    <p><strong>₦80,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Back-End Web Development</h4>
+                    <p>Learn Node.js, Express, and databases to build powerful web applications.</p>
+                    <p><strong>₦80,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Web Design with WordPress</h4>
+                    <p>Create professional websites without coding using WordPress.</p>
+                    <p><strong>₦100,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Data Analysis with Excel</h4>
+                    <p>Analyze data effectively using Excel formulas, charts, and pivot tables.</p>
+                    <p><strong>₦100,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow p-3 text-center">
+                    <h4>Canva Designs & CapCut</h4>
+                    <p>Learn creative designs and video editing using Canva and CapCut.</p>
+                    <p><strong>₦50,000</strong></p>
+                    <a href="https://wa.me/2349050371011" class="btn-enroll">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container text-center my-5 section-hover">
+        <h2>Contact Me</h2>
+        <p>Email: <strong>admin@techalphahub.com</strong></p>
+        <p>Phone: <strong>+2347066155981, +2348130790321</strong></p>
+        <p>Address: TechAlpha Hub, 139 Etinan-Uyo Road, Etinan, Akwa Ibom State</p>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <p>&copy; 2025 Treasure Idem | Designed with <i class="fa fa-heart secondary-color"></i></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
