@@ -70,10 +70,101 @@
             margin-bottom: 10px;
         }
 
-        /* Keyframe Animations */
+
+           /* Pop-Up Ad */
+           .popup-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1b479e, #fb8127);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: white;
+            display: none;
+            max-width: 400px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .popup-container h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .popup-container p {
+            font-size: 18px;
+        }
+
+        .popup-btn {
+            background: white;
+            color: #1b479e;
+            font-weight: bold;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .popup-btn:hover {
+            background: #fb8127;
+            color: white;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: white;
+            color: red;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 50%;
+        }
+
+        /* Cookie Notification */
+        .cookie-notice {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            text-align: center;
+        }
+
+        .cookie-notice button {
+            background: #1b479e;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .cookie-notice button:hover {
+            background: #fb8127;
+        }
+
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translate(-50%, -60%); opacity: 0; }
+            to { transform: translate(-50%, -50%); opacity: 1; }
         }
 
     </style>
@@ -204,6 +295,51 @@
     <footer class="footer text-center">
         <p>&copy; 2025 Treasure Idem | Designed with <i class="fa fa-heart secondary-color"></i></p>
     </footer>
+
+<!-- Cookie Notification -->
+<div class="cookie-notice" id="cookieNotice">
+    <p>This website uses cookies to enhance your experience. By continuing to use this site, you accept our use of cookies.</p>
+    <button onclick="acceptCookies()">Accept Cookies</button>
+</div>
+
+    <!-- Pop-Up Ad -->
+    <div class="popup-container" id="popupAd">
+        <button class="popup-close" onclick="closePopup()">×</button>
+        <h3>🚀 Enroll Now & Upgrade Your Skills! 🎯</h3>
+        <p>Join our Web Development & Digital Courses today!</p>
+        <a href="https://wa.me/2349050371011" class="popup-btn">Enroll on WhatsApp</a>
+    </div>
+
+<script>
+    // Function to Show Pop-Up Ad After 10s
+    function showPopup() {
+        if (!sessionStorage.getItem("popupShown")) {
+            document.getElementById("popupAd").style.display = "block";
+            sessionStorage.setItem("popupShown", "true");
+        }
+    }
+    setTimeout(showPopup, 10000);
+
+    // Function to Close Pop-Up
+    function closePopup() {
+        document.getElementById("popupAd").style.display = "none";
+    }
+
+    // Function to Accept Cookies
+    function acceptCookies() {
+        document.getElementById("cookieNotice").style.display = "none";
+        document.cookie = "cookieAccepted=true; path=/; max-age=" + 60*60*24*30;
+    }
+
+    // Function to Check Cookies
+    function checkCookies() {
+        if (!document.cookie.includes("cookieAccepted=true")) {
+            document.getElementById("cookieNotice").style.display = "block";
+        }
+    }
+    window.onload = checkCookies;
+</script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
